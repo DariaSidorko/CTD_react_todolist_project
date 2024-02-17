@@ -1,0 +1,459 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    margin: 0;
+    background-color: rgb(190, 190, 190);
+  }
+
+  h1{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 40x;
+  }
+
+  p{
+    color: #ffffff;
+    margin-top: 2%;
+    font-weight: 300;
+  }
+
+  /* button{
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    border: 2px solid transparent;
+
+  } */
+
+  button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+
+  input{
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.6);
+    color: #ffffff;
+}
+
+input::placeholder {
+    font-weight: 200;
+    opacity: 0.7;
+    color: #ffffff;
+  }
+  input:hover{
+    cursor: pointer;
+  }
+
+.mainWrapper{
+    background-image: linear-gradient(to bottom right, rgb(67, 123, 132), rgb(206, 161, 183));
+    margin: 0 15%;
+    padding: 6%;
+    min-height: 100vh
+}
+
+
+.subheading {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 4%;
+}
+
+.headingWrapper{
+    width: 50%;
+}
+
+.addBtnWrapper{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    flex-direction: row;
+    float: left;
+}
+
+.addBtn{
+    display: flex;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.4);
+    padding: 8px;
+    margin-top: 20px;
+    border: rgb(0, 0, 0, 0.1) solid 1px;
+    border-radius: 5px;
+}
+
+.favoritesBtn{
+    display: flex;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.4);
+    padding: 8px;
+    margin-right: 12px;
+    margin-top: 20px;
+    border: rgb(0, 0, 0, 0.1) solid 1px;
+    border-radius: 5px;
+}
+
+.favoritesBtnTrue{
+    display: flex;
+    color: white;
+    background-color: rgb(206, 161, 183);
+    padding: 8px;
+    margin-right: 12px;
+    margin-top: 20px;
+    border: rgb(206, 161, 183) solid 1px;
+    border-radius: 5px; 
+}
+
+.favoritesBtnTrue:hover{
+    background-color: rgb(206, 161, 183, 0.7);
+    border: rgb(206, 161, 183, 0.1) solid 1px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.favoritesBtn:hover{
+    background-color: rgb(0, 0, 0, 0.25);
+    border: rgb(0, 0, 0, 0.1) solid 1px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.addBtn:hover{
+    background-color: rgb(0, 0, 0, 0.25);
+    border: rgb(0, 0, 0, 0.1) solid 1px;
+    border-radius: 8px;
+}
+
+
+/* .addTask{
+    color: #070606;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: rgba(3, 3, 3, 0.3);
+    border: none;
+    border-radius: 3px;
+    padding: 20px 0;
+    margin-left: none;
+    margin: 3% 0% 5% 0%;
+} */
+
+
+
+.taskDateWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 82%;
+    padding-left: 5%;
+}
+
+.ListItem {
+    color: #070606;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 10px;
+    min-height: 43px;
+    margin-left: none;
+    margin: 2px;
+    border: 1px solid transparent;
+}
+
+.ListItem:hover {
+    border: 1px solid rgba(126, 125, 125);
+    border-radius: 5px;
+}
+
+.checkedStatus {
+    margin-left: 2%;
+    margin-top: 1.8%;
+}
+
+.showNotDone{
+    border: 1px solid transparent;
+    color: rgb(45, 45, 45);;
+}
+
+.showNotDone:hover{
+    border: 1px solid rgb(45, 45, 45);
+    cursor: pointer;
+}
+
+.showDone{
+    color: rgb(196, 196, 196);
+}
+
+.showDone:hover{
+    cursor: pointer;
+}
+
+.hide{
+    display: none;    
+}
+
+.taskIsDone {
+    text-decoration: line-through;
+    color: rgb(196, 196, 196);
+    font-size: 14.5px;
+}
+
+.taskNotDone{
+    text-decoration: none;
+    color: rgb(45, 45, 45);
+    font-size: 14.5px;
+}
+
+.dateDueNotDone{
+    font-size: 12px;
+    padding-top: 1.5%;
+    color: grey;
+}
+
+.dateDueDone{
+    font-size: 12px;
+    padding-top: 1.5%;
+    color: rgb(196, 196, 196);
+    text-decoration: line-through;
+}
+
+.dueIcone{
+    padding-right: 1%;
+    font-size: 13px;
+}
+
+.taskIsDoneButton{
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    border: 2px solid transparent;
+    color: rgb(196, 196, 196);
+}
+
+.taskNotDoneButton{
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    border: 2px solid transparent;
+}
+
+.deleteBtn {
+    padding: 4px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.deleteBtn:hover{
+    font-size: 14px;
+    background-color: rgb(239, 239, 239);
+    padding: 4px;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 4px;
+}
+
+.addFavoriteBtn{
+    padding: 4px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.favoriteButtonFilledOff{
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    color: rgb(196, 196, 196, 0.5);
+    font-size: 19px;
+}
+
+.favoriteButtonOff{
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    color: rgb(196, 196, 196);
+    /* font-size: 19px; */
+}
+
+
+.favoriteAddedButton{
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    color: rgb(206, 161, 183, 0.5);
+    font-size: 19px;
+    /* background-color: rgb(206, 161, 183); */
+}
+
+.favoriteRemovedButton{
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 4px;
+    border: 2px solid transparent;
+}
+
+.pastDueNotice{
+    color: rgb(206, 161, 183);
+}
+
+
+
+
+.mainWrapperAddTask{
+    background-image: linear-gradient(to bottom right, rgb(67, 123, 132), rgb(206, 161, 183));
+    margin: 8% 15%;
+    padding: 6%;
+
+}
+
+
+.addTaskWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    width: 50%;
+}
+
+.datePicker{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10% 8%;
+}
+
+.buttonWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttonBackDone{
+    border: 1px solid rgb(0, 0, 0, 0.25);
+    background-color: rgb(0, 0, 0, 0.35);
+    margin: 5px;
+    padding: 7px 28px;
+    border-radius: 4px;
+    color: rgb(226, 226, 226);
+    font-size: 12px;
+}
+
+.buttonBackDone:hover{
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+
+.buttonBackLink{
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+}
+
+
+
+
+/* .remove{
+    width: 10%;
+} */
+
+
+
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 800px) and (max-width: 1024px){
+
+    .mainWrapper{
+        margin: 0 0;
+        padding: 6% 20%;
+        height: 100vh;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 800px){
+
+    .mainWrapper{
+        margin: 0 0;
+        padding: 6% 10%;
+        height: 100vh;
+    }
+
+    .addTaskWrapper{
+        padding-left: 8%;
+        padding-right: 8%;
+        width: 50%;
+    }
+
+    .datePicker{
+        width: 41.5%;
+        padding: 10% 2%;
+    }
+    
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+
+    .mainWrapper{
+        margin: 0 0;
+        padding: 6%;
+        height: 100vh;
+    }
+
+    .addTaskWrapper{
+        padding-left: 8%;
+        padding-right: 8%;
+        /* width: 50%; */
+    }
+
+    .datePicker{
+        width: 41.5%;
+        padding: 10% 0%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
