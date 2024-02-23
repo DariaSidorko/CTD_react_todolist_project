@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "../TodoListItem.module.css" ;
 import "../TodoListItem.module.css";
+import PropTypes from 'prop-types';
 
 import { TfiLayoutWidthFull } from "react-icons/tfi";
 // import { TfiClose } from "@react-icons/tfi";
@@ -12,8 +13,17 @@ import { TbHeartFilled } from "react-icons/tb";
 
 function TodoListItem({item, onRemoveTodo, disableTask, addRemoveFavorite}) {
 
-  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
+  TodoListItem.propTypes = {
+    item: PropTypes.object.isRequired,
+    onRemoveTodo: PropTypes.func.isRequired,
+    disableTask: PropTypes.func.isRequired,
+    addRemoveFavorite: PropTypes.func.isRequired,
+  }
+
+
+  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
   const checkedStatus = item.done === "true" ? true : false;
 
@@ -21,12 +31,9 @@ function TodoListItem({item, onRemoveTodo, disableTask, addRemoveFavorite}) {
     checkedStatus = item.done === "true" ? true : false;
   } 
 
-  {/* <TfiLayoutPlaceholder /> */}
-  // item.done === "true"? styles.favoriteButtonOff : 
   const d = new Date();
 
 
-// ClassName={item.dateDue === }
   return (
     <li className={styles.ListItem}>
       <i className={styles.checkedStatus} checked = { checkedStatus } onChange={() => handleChange}   type="checkbox"  onClick={(e) => disableTask(item)} >
@@ -38,7 +45,7 @@ function TodoListItem({item, onRemoveTodo, disableTask, addRemoveFavorite}) {
         <span className={(item.done === "true" ? styles.taskIsDone : styles.taskNotDone )} style={{ textAlign: 'left' }}> {item.title} </span>
 
         <span className={(item.done === "true" ? styles.dateDueDone : styles.dateDueNotDone )} > 
-        <TfiClipboard className={styles.dueIcone} /> {months[item.dateDue.getMonth()] + ", " + item.dateDue.getDate()} 
+        <TfiClipboard className={styles.dueIcone} /> {weekdays[item.dateDue.getDay()]+ ', ' + months[item.dateDue.getMonth()] + ", " + item.dateDue.getDate()} 
           <span className={(item.dateDue < d && item.done !== "true") ?  styles.pastDueNotice : styles.hide }> - expired!</span> </span>
 
       </div>

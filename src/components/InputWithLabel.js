@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 
 function InputWithLabel({id, title, value, handleChange, children, comment}) {
     
-    // InputWithLabel.propTypes = {
-    //     id: PropTypes.string.isRequired,
-    //     todoTitle: PropTypes.string.isRequired,
-    //     title: PropTypes.string.isRequired,
-    //     handleChange: PropTypes.func.isRequired,
-    //     children: PropTypes.string
-    //   }
+    InputWithLabel.propTypes = {
+        id: PropTypes.string.isRequired,
+        value: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        handleChange: PropTypes.func.isRequired,
+        children: PropTypes.string,
+        comment: PropTypes.string
+      }
 
     const inputRef = React.useRef(null);
 

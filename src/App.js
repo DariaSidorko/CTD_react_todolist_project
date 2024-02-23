@@ -59,8 +59,6 @@ function App() {
     fetchData();
     setFavoritesBtnStatus(false);
     }
-    console.log("AFTER")
-    console.log(favoritesBtnStatus)
   }
 
 
